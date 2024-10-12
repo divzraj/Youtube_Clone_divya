@@ -1,0 +1,23 @@
+trigger:
+- main
+
+stages:
+ -  stage: This is build stage
+    jobs:
+    - job:
+      pool:
+        vmImage: ubuntu-latest
+      steps:
+      - task: Npm@1
+        inputs:
+          command: 'install'
+          workingDir: '$(Agent.BuildDirectory)'
+
+
+# pool:
+#   vmImage: ubuntu-latest
+
+# steps:
+# - script: echo Hello, world!
+#   displayName: 'Run a one-line script'
+

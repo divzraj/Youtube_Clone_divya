@@ -5,9 +5,7 @@ stages:
 - stage: 'Thisisbuildstage'
   jobs:
   - job: Buildjob
-    pool:
-      name: myagent
-      #vmImage: 'ubuntu-latest'
+    pool: Mynewpool
     steps:
     - task: Npm@1
       inputs:

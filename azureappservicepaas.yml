@@ -7,12 +7,8 @@ stages:
   - job: Buildjob
     pool: Mynewpool
     steps:
-    # - task: Npm@1
-    #   inputs:
-    #     command: 'install'
     - script: echo Hello, world!
       displayName: 'Run a one-line script'
-    - task: Npm@1
+    - task: npm@1
       inputs:
-        command: 'install'
-
+       command: install 

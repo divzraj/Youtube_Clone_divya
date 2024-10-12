@@ -1,0 +1,30 @@
+trigger:
+- main
+
+stages:
+ - stage: Buildstage
+   jobs:
+    - job: npminstall
+      pool:
+       vmImage: ubuntu-latest
+      steps:
+       - script: |
+          echo Hello World
+          echo hey there
+
+       - task: Npm@1
+         inputs:
+            command: 'install'
+
+ 
+# pool:
+#   vmImage: ubuntu-latest
+
+# steps:
+# - script: echo Hello, world!
+#   displayName: 'Run a one-line script'
+
+# - script: |
+#     echo Add other tasks to build, test, and deploy your project.
+#     echo See https://aka.ms/yaml
+#   displayName: 'Run a multi-line script'

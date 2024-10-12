@@ -7,15 +7,9 @@ stages:
   - job: Buildjob
     pool: Mynewpool
     steps:
-    - task: Npm@1
-      inputs:
-        command: 'install'
-
-
-# pool:
-#   vmImage: ubuntu-latest
-
-# steps:
-# - script: echo Hello, world!
-#   displayName: 'Run a one-line script'
+    # - task: Npm@1
+    #   inputs:
+    #     command: 'install'
+    - script: echo Hello, world!
+      displayName: 'Run a one-line script'
 

@@ -9,8 +9,8 @@ stages:
        vmImage: ubuntu-latest
       steps:
        - script: |
-          echo Hello World
-          echo hey there
+          ls -ltr
+          pwd
        - task: Npm@1
          inputs:
            command: 'install'

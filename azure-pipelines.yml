@@ -11,10 +11,11 @@ stages:
        - script: |
           echo Hello World
           echo hey there
-
        - task: Npm@1
          inputs:
-            command: 'install'
+           command: 'install'
+           workingDir: '$(Agent.BuildDirectory)'
+
 
  
 # pool:

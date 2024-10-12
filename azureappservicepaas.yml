@@ -2,16 +2,15 @@ trigger:
 - main
 
 stages:
- -  stage: This is build stage
-    jobs:
-    - job:
-      pool:
-        vmImage: ubuntu-latest
-      steps:
-      - task: Npm@1
-        inputs:
-          command: 'install'
-          workingDir: '$(Agent.BuildDirectory)'
+- stage: 'Thisisbuildstage'
+  jobs:
+  - job: Buildjob
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: Npm@1
+      inputs:
+        command: 'install'
 
 
 # pool:
